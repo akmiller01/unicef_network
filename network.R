@@ -45,4 +45,4 @@ visnet3 <- visGroups(visnet3, groupname = "Status", shape = "diamond",
 visLegend(visnet3, main="Legend", position="right", ncol=1) %>%
   visOptions(manipulation = TRUE) %>% 
   visEvents(stabilizationIterationsDone="function () {this.setOptions( { physics: false } );}") %>% 
-  visSave(file = "index.html")
+  visSave(file = "vis1.html")
