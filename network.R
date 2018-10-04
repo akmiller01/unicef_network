@@ -89,7 +89,7 @@ nodes$font.size=20
 links$smooth = F
 visnet2 <- visNetwork(nodes, links, height = "800px", width = "100%")
 visnet2 <- visGroups(visnet2, groupname = "Data link", shape = "square",
-                     color = list(background = "green", border="black"))
+                     color = list(background = "blue", border="black"))
 visnet2 <- visGroups(visnet2, groupname = "System", shape = "dot",       
                      color = list(background = "tomato", border="black"))
 visnet2 <- visGroups(visnet2, groupname = "Status", shape = "diamond",   
