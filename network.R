@@ -35,14 +35,16 @@ links$weight = 1
 nodes$group <- nodes$type
 nodes$label = nodes$name
 nodes$font.size=20
-visnet3 <- visNetwork(nodes, links, height = "800px", width = "100%")
-visnet3 <- visGroups(visnet3, groupname = "Department", shape = "square",
+links$smooth = F
+visnet1 <- visNetwork(nodes, links, height = "800px", width = "100%")
+visnet1 <- visGroups(visnet1, groupname = "Department", shape = "square",
                      color = list(background = "green", border="black"))
-visnet3 <- visGroups(visnet3, groupname = "System", shape = "dot",       
+visnet1 <- visGroups(visnet1, groupname = "System", shape = "dot",       
                      color = list(background = "tomato", border="black"))
-visnet3 <- visGroups(visnet3, groupname = "Status", shape = "diamond",   
+visnet1 <- visGroups(visnet1, groupname = "Status", shape = "diamond",   
                      color = list(background = "orange", border="black"))
-visLegend(visnet3, main="Legend", position="right", ncol=1) %>%
+visnet1 %>%
+  visLegend(main="Legend", position="right", ncol=1) %>%
   visOptions(manipulation = TRUE) %>% 
   visEvents(stabilizationIterationsDone="function () {this.setOptions( { physics: false } );}") %>% 
   visSave(file = "vis1.html")
